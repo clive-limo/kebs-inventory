@@ -1,6 +1,6 @@
 export const AppConfig = {
-  site_name: 'Starter',
-  title: 'Nextjs Starter',
-  description: 'Starter code for your Nextjs Boilerplate with Tailwind CSS',
+  site_name: 'Kebs Inventory',
+  title: 'Inventory Management',
+  description: 'Inventory Management System for KEBS',
   locale: 'en',
 };
