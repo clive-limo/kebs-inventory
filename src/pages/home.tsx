@@ -46,7 +46,7 @@ const Home: FC = () => {
           <div
             className={clsx(
               'ml-10 flex flex-row rounded-lg p-1',
-              location === 'cfs' ? 'ml-9 bg-blue-300' : 'ml-10 bg-gray-200'
+              location === 'cfs' ? 'ml-9 bg-teal-100' : 'ml-10 bg-gray-200'
             )}
             onClick={() => setLocation('cfs')}
           >
@@ -58,7 +58,7 @@ const Home: FC = () => {
           <div
             className={clsx(
               'ml-10 flex flex-row rounded-lg p-1',
-              location === 'taveta' ? 'ml-9 bg-blue-300' : 'ml-10 bg-gray-200'
+              location === 'taveta' ? 'ml-9 bg-teal-100' : 'ml-10 bg-gray-200'
             )}
             onClick={() => setLocation('taveta')}
           >
@@ -71,7 +71,7 @@ const Home: FC = () => {
             className={clsx(
               'ml-10 flex flex-row rounded-lg p-1',
               location === 'lungalunga'
-                ? 'ml-9 bg-blue-300'
+                ? 'ml-9 bg-teal-100'
                 : 'ml-10 bg-gray-200'
             )}
             onClick={() => setLocation('lungalunga')}
@@ -95,31 +95,50 @@ const Home: FC = () => {
               className="absolute bottom-0 right-3 flex flex-1 select-none flex-row"
             >
               <p
-                className="m-1 my-auto rounded-md bg-blue-200 p-2 text-sm"
+                className={clsx(
+                  'm-1 my-auto rounded-md bg-blue-200 p-2 text-sm hover:bg-teal-50',
+                  selectedComponent === 'Laptops' ? 'bg-teal-50' : 'bg-blue-200'
+                )}
                 onClick={() => setSelectedComponent('Laptops')}
               >
                 Laptop
               </p>
               <p
-                className="m-1 my-auto rounded-md bg-blue-200 p-2 text-sm"
+                className={clsx(
+                  'm-1 my-auto rounded-md bg-blue-200 p-2 text-sm hover:bg-teal-50',
+                  selectedComponent === 'Desktops'
+                    ? 'bg-teal-50'
+                    : 'bg-blue-200'
+                )}
                 onClick={() => setSelectedComponent('Desktops')}
               >
                 Desktop
               </p>
               <p
-                className="m-1 my-auto rounded-md bg-blue-200 p-2 text-sm"
+                className={clsx(
+                  'm-1 my-auto rounded-md bg-blue-200 p-2 text-sm hover:bg-teal-50',
+                  selectedComponent === 'Printers'
+                    ? 'bg-teal-50'
+                    : 'bg-blue-200'
+                )}
                 onClick={() => setSelectedComponent('Printers')}
               >
                 Printers
               </p>
               <p
-                className="m-1 my-auto rounded-md bg-blue-200 p-2 text-sm"
+                className={clsx(
+                  'm-1 my-auto rounded-md bg-blue-200 p-2 text-sm hover:bg-teal-50',
+                  selectedComponent === 'Network' ? 'bg-teal-50' : 'bg-blue-200'
+                )}
                 onClick={() => setSelectedComponent('Network')}
               >
                 Network
               </p>
               <p
-                className="m-1 my-auto rounded-md bg-blue-200 p-2 text-sm"
+                className={clsx(
+                  'm-1 my-auto rounded-md bg-blue-200 p-2 text-sm hover:bg-teal-50',
+                  selectedComponent === 'Power' ? 'bg-teal-50' : 'bg-blue-200'
+                )}
                 onClick={() => setSelectedComponent('Power')}
               >
                 Power
